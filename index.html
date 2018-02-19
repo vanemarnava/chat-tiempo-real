@@ -5,19 +5,31 @@
 	<!-- responsive -->
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Socket.IO chat</title>
+  <!-- enlace tipo fuente -->
+  <link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
 	<!-- enlace con css -->
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body>
 
-	<ul id="messages"></ul>
-  <form action="">
-    <input id="m" autocomplete="off" /><button>Send</button>
-  </form>
+	<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <ul id="messages"></ul>
+        <form action="">
+          <input id="men" autocomplete="off" placeholder="Escribe tu mensaje.." />
+          <button id="send">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
 	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
 	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-  <script>
+  <script type="text/javascript" src="index.js" ></script>
+  <script src="assets/js/app.js" ></script>
+  <!-- llevado a app.js
+   <script>
     $(function () {
       var socket = io('http://34.227.11.223:3000');
       $('form').submit(function(){
@@ -29,7 +41,7 @@
         $('#messages').append($('<li>').text(msg));
       });
     });
-  </script>
+  </script> -->
 </body>
 </html>
 
